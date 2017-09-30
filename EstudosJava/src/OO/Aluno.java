@@ -1,11 +1,13 @@
 package OO;
 
+import java.util.Date;
 public class Aluno {
 
+	private Endereco endereco;	
 	private String nome;
 	private int idade;
 	private String curso;
-	
+	private Date dtnasc;	
 	
 	public String getNome() {
 		return nome;
@@ -24,10 +26,26 @@ public class Aluno {
 	}
 	public void setCurso(String curso) {
 		this.curso = curso;
-	}	
-		
+	}
+	public Date getDtnasc() {
+		return dtnasc;
+	}
+	public void setDtnasc(Date dtnasc) {
+		this.dtnasc = dtnasc;
+	}
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+	
+	public void enderecolist() {
+		System.out.println(this.endereco.getLogradouro() + "-" + this.getEndereco().getBairro());
+	}
+	
 	public void listar() {
-		System.out.println("Aluno:" + this.nome + " de idade:" + this.idade + " estuda o curso:" + this.curso);
+		System.out.println("Aluno:" + this.nome + " de idade:" + this.idade + "anos nascido em:" + this.dtnasc + " estuda o curso:" + this.curso);
 	}
 	public void maioridade(){
 		if(this.idade > 18) {
@@ -45,5 +63,8 @@ public class Aluno {
 			System.out.println("Curso invalido!");
 		}
 	}
+	
+	
+	
 	
 }

@@ -32,11 +32,9 @@ public class AtvNumeros {
 					if(j > maiornumero) {
 						maiornumero = j;
 					}
-					else if(menornumero < j){
+					if(menornumero < j ){
 						menornumero = j;
-					}else if(j < menornumero) {
-						menornumero = j;
-					}					
+					}				
 				}				
 								
 				media = media/lista.size();
