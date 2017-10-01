@@ -1,6 +1,8 @@
+package Logica;
+
 import java.util.Scanner;
 
-public class principal {
+public class Fibonacci {
 	public static void main(String[] args) {
 		
 		Scanner teclado = new Scanner(System.in);
