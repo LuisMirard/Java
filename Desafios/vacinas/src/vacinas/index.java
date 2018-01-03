@@ -7,7 +7,7 @@ public class index {
 
 	public static void main (String[] args) {
 		VacinasAction va = new VacinasAction();
-		List<Vacinas> vac =  new ArrayList();
+		myList<Vacinas> vac = new myList();
 		
 		Integer i=0;
 		Integer count =  0;

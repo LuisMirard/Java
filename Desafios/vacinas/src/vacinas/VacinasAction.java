@@ -8,41 +8,51 @@ public class VacinasAction {
 		private Scanner ler = new Scanner(System.in);
 		
 		
-		public void cadastrar(List<Vacinas> vac, Integer count,String desc){	
-			Vacinas obj = new Vacinas();
+		public void cadastrar(myList<Vacinas> vac, Integer count,String desc){	
+			Vacinas obj = new Vacinas();			
 			obj.setCodigo(count);
 			obj.setDescricao(desc);
 			vac.add(obj);
 			System.out.println("CADASTRO REALIZADO COM SUCESSO!!!!");						
 			
 		}
-		public void editar(Integer codigo, String descricao, List<Vacinas> vac){
-			if(vac == null || vac.isEmpty()){
+		public void editar(Integer codigo, String descricao, myList<Vacinas> vac){
+			if(vac == null/* || vac.isEmpty()*/){
 				System.out.println("SEM REGISTRO");
 			}else{
-				for (Vacinas v : vac) {
+				/*inter
+				for (int i = 0; i < vac.tamanho; i++) {
+					if(codigo == ) {
+						 
+						v.setDescricao(descricao);
+						System.out.println("DESCRIÇÂO EDITADA COM SUCESSO!!!!");
+					}else {
+						System.out.println("VACINA NÃO ENCONTRADA!!!!");		
+					}
+				}*/
+				/*for (Vacinas v : vac) {
 					if(codigo == v.getCodigo()) {
 						v.setDescricao(descricao);
 						System.out.println("DESCRIÇÂO EDITADA COM SUCESSO!!!!");
 					}else {
 						System.out.println("VACINA NÃO ENCONTRADA!!!!");		
 					}
-				}
+				}*/
 			}
 		}
-		public void listar(List<Vacinas> vac){
-			if(vac == null || vac.isEmpty()){
+		public void listar(myList<Vacinas> vac){
+			if(vac == null /*|| vac.isEmpty()*/){
 				System.out.println("SEM REGISTRO");
 			}else{
 				System.out.println("-> LISTAGEM DE VACINAS <-");
-				vac.stream().forEach(p -> System.out.println("|"+p.getCodigo()+"|" + p.getDescricao()+"|"));
+				//vac.stream().forEach(p -> System.out.println("|"+p.getCodigo()+"|" + p.getDescricao()+"|"));
 				
 			}			
 		}
 			
 
-		public void excluir(Integer codigo,List<Vacinas> vac ){			
-			if(vac == null || vac.isEmpty()){
+		public void excluir(Integer codigo,myList<Vacinas> vac ){			
+			if(vac == null /*|| vac.isEmpty()*/){
 				System.out.println("SEM REGISTRO");
 			}else{
 				vac.remove(codigo);
@@ -66,7 +76,7 @@ public class VacinasAction {
 			return opcao;
 		}
 		
-		public void validaopcao(String opcao, List<Vacinas> vac, Integer count){		
+		public void validaopcao(String opcao, myList<Vacinas> vac, Integer count){		
 			Integer op = Integer.parseInt(opcao);
 			switch (op){
 			case 1:
